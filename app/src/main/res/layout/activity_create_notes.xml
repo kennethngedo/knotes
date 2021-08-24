@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.knotes.app.ui.notes.NotesViewModel" />
+    </data>
+
+
+    <com.knotes.app.ui.commons.customviews.KForm
+        android:id="@+id/notesForm"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.notes.CreateNotesActivity">
+
+        <com.knotes.app.ui.commons.customviews.KEditText
+            android:id="@+id/noteTitleEdt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/noteTitleHint"
+            android:lines="1" />
+
+        <com.knotes.app.ui.commons.customviews.KEditText
+            android:id="@+id/noteContentEdt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="top"
+            android:textColor="@color/black"
+            android:hint="@string/noteContentHint"
+            android:lines="5"
+            android:maxLength="100" />
+
+        <Button
+            android:id="@+id/saveBtn"
+            android:text="@string/saveNote"
+            android:enabled="false"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </com.knotes.app.ui.commons.customviews.KForm>
+</layout>

@@ -1,0 +1,2 @@
+rootProject.name = "Knotes"
+include ':app'
